@@ -1,25 +1,24 @@
+var ame1 = "Player 1";
+var ame2 = "Player 2";
+
 function names() {
     var playerone = prompt("What is the name of Player 1?");
-    var firstlenght = playerone.length;
-    var firstc = playerone.slice(0, 1);
-    if (firstlenght === 0) {
+    
+    if (firstlenght < 0) {
+        var firstlenght = playerone.length;
+        var firstc = playerone.slice(0, 1);
+        var ame1 = (firstc + playerone.slice(1,10));
         var name1 = document.querySelector(".name1");
-        name1.innerHTML = ("Player 1");
+        name1.innerHTML = (ame1);
     }
-    else {
-        var name1 = document.querySelector(".name1");
-        name1.innerHTML = (firstc.toUpperCase() + playerone.slice(1,15));
-    }
+
     var playertwo = prompt("What is the name of Player 2?");
     var secondlenght = playertwo.length;
     var secondc = playertwo.slice(0, 1);
-    if (secondlenght === 0) {
+    if (secondlenght < 0) {
+        var ame2 = (secondc + playertwo.slice(1, 10));
         var name2 = document.querySelector(".name2");
-        name2.innerHTML = ("Player 2");
-    }
-    else {
-        var name2 = document.querySelector(".name2");
-        name2.innerHTML = (secondc.toUpperCase() + playertwo.slice(1,15));
+        name2.innerHTML = (ame2);
     }
 }
 
@@ -40,14 +39,14 @@ function roll() {
 
     if (P1 > P2) {
         var header = document.querySelector(".head");
-        header.innerHTML = "Player 1 wins";
+        header.innerHTML = (ame1 + " wins");
     }
     else if (P1 < P2) {
         var header = document.querySelector(".head");
-        header.innerHTML = "Player 2 wins";
+        header.innerHTML = ("Player 2 wins");
     }
     else {
         var header = document.querySelector(".head");
-        header.innerHTML = "I win";
+        header.innerHTML = "No one wins";
     }
 }
