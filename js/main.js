@@ -1,22 +1,30 @@
-let ame1;
-let ame2;
+var ame1;
+var ame2;
+
 function names() {
-    
     var playerone = prompt("What is the name of Player 1?");
-    
-    if (firstlenght < 0) {
-        var firstlenght = playerone.length;
-        var firstc = playerone.slice(0, 1);
-        var ame1 = (firstc + playerone.slice(1,10));
+    var firstlenght = playerone.length;
+    var firstc = playerone.slice(0, 1).toUpperCase();
+    ame1 = (firstc + playerone.slice(1,10));
+
+    if (firstlenght > 0) {
+        var name1 = document.querySelector(".name1");
+        name1.innerHTML = (ame1);
+    } else {
+        ame1 = "Player 1"
         var name1 = document.querySelector(".name1");
         name1.innerHTML = (ame1);
     }
 
     var playertwo = prompt("What is the name of Player 2?");
     var secondlenght = playertwo.length;
-    var secondc = playertwo.slice(0, 1);
-    if (secondlenght < 0) {
-        var ame2 = (secondc + playertwo.slice(1, 10));
+    var secondc = playertwo.slice(0, 1).toUpperCase();
+    ame2 = (secondc + playertwo.slice(1, 10));
+    if (secondlenght > 0) {
+        var name2 = document.querySelector(".name2");
+        name2.innerHTML = (ame2);
+    } else {
+        ame2 = "Player 2"
         var name2 = document.querySelector(".name2");
         name2.innerHTML = (ame2);
     }
