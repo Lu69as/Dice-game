@@ -1,5 +1,5 @@
-var ame1;
-var ame2;
+var ame1 = "Player 1";
+var ame2 = "Player 2";
 
 function names() {
     var playerone = prompt("What is the name of Player 1?");
